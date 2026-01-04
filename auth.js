@@ -173,7 +173,7 @@ async function signUp(e) {
 
       })
         .then(() => {
-          location.href = "/crud/ecom-home.html"
+          location.href = "login.html"
         })
 
 
@@ -302,29 +302,7 @@ async function login(e) {
         return;
     }
 
-    if (email === "admin@gmail.com" && pass === "admin12345") {
-
-        Swal.fire({
-            title: "Admin logged in Successfully!",
-            icon: "success",
-            background: "ffffff",
-            color: "#000000",
-            confirmButtonColor: "#000000",
-            confirmButtonText: "Go to Admin portal..",
-            padding: "20px",
-            borderRadius: "15px",
-            customClass: {
-                popup: "glass-alert"
-            }
-        }).then(() => {
-            location.href = "/crud/admin.html";
-        });
-
-
-
-        return;
-
-    }
+  
 
     try {
 
@@ -392,7 +370,7 @@ async function login(e) {
                 popup: "glass-alert"
             }
         }).then(() => {
-            location.href = "/crud/ecom-home.html";
+            location.href = "home.html";
         });
 
 
@@ -446,7 +424,7 @@ lBtn && lBtn.addEventListener("click", login);
             padding: "20px",
            
         }).then(() => {
-            location.href = "/Authentication/login.html";
+            location.href = "login.html";
         });
 
         }
