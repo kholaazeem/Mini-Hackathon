@@ -3,7 +3,7 @@
 A dynamic social media feed application where users can share thoughts, upload images, and interact with content. Built with **Vanilla JavaScript** and powered by **Supabase** for backend services.
 
 ## 🚀 Live Demo
-[[Click here to view the Live Demo](#)](https://kholaazeem.github.io/Mini-Hackathon/)
+[[Click here to view the Live Demo](https://kholaazeem.github.io/Mini-Hackathon/)]
 
 ## ✨ Features
 
@@ -25,12 +25,11 @@ A dynamic social media feed application where users can share thoughts, upload i
 
 ## 📸 Screenshots
 
-![Home Page](
-<img width="1917" height="948" alt="Screenshot 2026-01-04 143810" src="https://github.com/user-attachments/assets/c8e74a28-0acb-4b60-b254-aef145c44c6e" />)
-*(Home Page Feed)*
+<img width="1917" height="948" alt="Screenshot 2026-01-04 143810" src="https://github.com/user-attachments/assets/c8e74a28-0acb-4b60-b254-aef145c44c6e" />
 
-![Create Modal](<img width="1920" height="939" alt="Screenshot 2026-01-04 143918" src="https://github.com/user-attachments/assets/9f53bfd1-844b-4d01-ba01-df04859d4472" />)
-*(Create Post Modal)*
+
+<img width="1920" height="939" alt="Screenshot 2026-01-04 143918" src="https://github.com/user-attachments/assets/9f53bfd1-844b-4d01-ba01-df04859d4472" />
+
 
 ## ⚙️ Installation & Setup
 
