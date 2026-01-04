@@ -403,3 +403,14 @@ footer .social-links a:hover { color: #bbb !important; }
 }
 .file-label:hover { background-color: #000; color: #fff; }
 .modal-title { color: #000; font-size: 20px; }
+
+
+
+/* --- Add this to the bottom of home.css --- */
+.text-truncate-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Sirf 1 line dikhayega   ye error nhi ha  */ 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

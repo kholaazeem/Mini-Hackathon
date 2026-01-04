@@ -15,7 +15,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">POST App</a>
+            <a class="navbar-brand" href="index.html">POST APP</a>
     
             <div class="d-none d-lg-flex ms-4 search-wrapper">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
@@ -76,71 +76,10 @@
         </div>
 
         <div class="row g-4" id="posts-container">
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card post-card h-100">
-                    <div class="card-img-top-wrapper">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="card-img-top" alt="Post Image">
-                        <span class="category-badge">Technology</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="post-meta mb-2">
-                            <span class="author"><i class="fa-regular fa-user"></i> Sarah Johnson</span>
-                            <span class="date">• Dec 28, 2025</span>
-                        </div>
-                        <h5 class="card-title">Getting Started with Modern Web Development</h5>
-                        <p class="card-text">Learn the fundamentals of building modern web applications with React and TypeScript...</p>
-                    </div>
-                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center pb-3">
-                        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                        <div class="action-buttons">
-                            <i class="fa-regular fa-pen-to-square edit-icon"></i>
-                            <i class="fa-regular fa-trash-can delete-icon"></i>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mt-5 w-100" id="feed-loader">
+                <div class="spinner-border text-dark" role="status"></div>
+                <p class="mt-2 text-muted">Loading fresh posts...</p>
             </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card post-card h-100">
-                    <div class="card-img-top-wrapper">
-                        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e" class="card-img-top" alt="Post Image">
-                        <span class="category-badge">Nature</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="post-meta mb-2">
-                            <span class="author"><i class="fa-regular fa-user"></i> Emma Williams</span>
-                            <span class="date">• Dec 25, 2025</span>
-                        </div>
-                        <h5 class="card-title">Exploring Nature Through Photography</h5>
-                        <p class="card-text">Join me on a journey through breathtaking landscapes and discover how photography can...</p>
-                    </div>
-                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center pb-3">
-                        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-             <div class="col-md-6 col-lg-4">
-                <div class="card post-card h-100">
-                    <div class="card-img-top-wrapper">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" class="card-img-top" alt="Post Image">
-                        <span class="category-badge">Business</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="post-meta mb-2">
-                            <span class="author"><i class="fa-regular fa-user"></i> Michael Chen</span>
-                            <span class="date">• Dec 27, 2025</span>
-                        </div>
-                        <h5 class="card-title">The Art of Writing Clean Code</h5>
-                        <p class="card-text">Discover best practices for writing maintainable and scalable code. Clean code is not just about...</p>
-                    </div>
-                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center pb-3">
-                        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 

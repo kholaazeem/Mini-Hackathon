@@ -43,33 +43,45 @@ async function loadMyPosts() {
                 month: 'short', day: 'numeric', year: 'numeric'
             });
 
+            // --- YAHAN CHANGE KIYA HAI ---
             const cardHTML = `
                 <div class="col-md-6 col-lg-4" id="post-${post.id}">
                     <div class="card post-card h-100">
+                        
                         <div class="card-img-top-wrapper">
                             <img src="${post.image_url}" class="card-img-top" alt="Post Image">
                             <span class="category-badge">${post.category}</span>
                         </div>
+                        
                         <div class="card-body">
                             <div class="post-meta mb-2">
                                 <span class="date text-muted" style="font-size: 12px;">• ${date}</span>
                             </div>
                             <h5 class="card-title">${post.title}</h5>
-                            <p class="card-text">${post.content}</p>
+                         <p class="card-text text-truncate-1">${post.content}</p>
                         </div>
+                        
                         <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center pb-3">
-                            <button class="btn btn-sm btn-outline-danger delete-btn" data-id="${post.id}" data-img="${post.image_url}">
-                                <i class="fa-regular fa-trash-can"></i> Delete
-                            </button>
-                           
-<button class="btn btn-sm btn-outline-dark edit-btn" 
-    data-id="${post.id}" 
-    data-title="${post.title}" 
-    data-content="${post.content}" 
-    data-category="${post.category}" 
-    data-img="${post.image_url}">
-    <i class="fa-regular fa-pen-to-square"></i> Edit
-</button>
+                            
+                            <a href="post-detail.html?id=${post.id}" class="read-more text-decoration-none fw-bold text-dark" style="font-size: 14px;">
+                                Read More <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-sm btn-outline-dark edit-btn" 
+                                    data-id="${post.id}" 
+                                    data-title="${post.title}" 
+                                    data-content="${post.content}" 
+                                    data-category="${post.category}" 
+                                    data-img="${post.image_url}">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </button>
+
+                                <button class="btn btn-sm btn-outline-danger delete-btn" data-id="${post.id}" data-img="${post.image_url}">
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
