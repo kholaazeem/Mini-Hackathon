@@ -137,7 +137,8 @@ async function signUp(e) {
       .insert({
         username: sUName.value,
         email: sEmail.value,
-        phone: sPhn.value
+        phone: sPhn.value,
+        uid: data.user.id
         // Password save nahi kar rahy (Safe practice)
       });
 

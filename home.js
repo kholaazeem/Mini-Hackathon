@@ -8,7 +8,7 @@ let username = document.getElementById("username");
 //  fetch data of current  user
 
 
-async function userFetch() {
+async function userFetch(param) {
   try {
     const { data, error } = await supaBase.auth.getUser();
     console.log(data);
@@ -153,7 +153,7 @@ const postsContainer = document.getElementById("posts-container");
 const loader = document.getElementById("feed-loader");
 
 // Navbar Elements
-const usernameDisplay = document.getElementById("nav-username");
+const usernameDisplay = document.getElementById("username");
 const avatarDisplay = document.querySelector(".user-avatar");
 const logoutBtn = document.getElementById("logout-btn");
 
@@ -176,7 +176,7 @@ async function loadFeed() {
         // Note: Table name wahi rakhein jo 'my-posts.js' mein kaam kar raha tha ('posts' ya 'Posts')
         const { data: posts, error } = await supaBase
             .from('my-posts')  
-            .select('*')
+            .select('* ,Profiles(username)') // Join with Profiles table to get username
             .order('created_at', { ascending: false }); // Newest pehle
 
         if (error) throw error;
@@ -194,7 +194,18 @@ async function loadFeed() {
             // Date Format
             const date = new Date(post.created_at).toLocaleDateString('en-US', {
                 month: 'short', day: 'numeric', year: 'numeric'
+                
             });
+
+            // 2. ✅ Author Name Logic (Foreign Key se)
+            
+            let authorName = "Unknown User";
+            if (post.Profiles && post.Profiles.username) {
+                authorName = post.Profiles.username;
+            }
+
+            // 3. Initial for DP (Pehla letter)
+            const initial = authorName.charAt(0).toUpperCase();
 
             // Card HTML
             const cardHTML = `
@@ -209,7 +220,11 @@ async function loadFeed() {
                         
                         <div class="card-body">
                             <div class="post-meta mb-2">
-                                <span class="author"><i class="fa-regular fa-user"></i> User</span>
+                                <div style="width: 25px; height: 25px; background: #000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">
+                                    ${initial}
+                                </div>
+
+                                <span class="author"> ${authorName}</span>
                                 <span class="date text-muted" style="font-size: 12px;">• ${date}</span>
                             </div>
                             <h5 class="card-title">${post.title}</h5>
